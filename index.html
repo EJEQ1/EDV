@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Análise Técnica · Gel de carboidrato de mel · EJEQ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --tinta:#070C26;
+  --tinta-70:rgba(7,12,38,.70);
+  --tinta-45:rgba(7,12,38,.45);
+  --tinta-12:rgba(7,12,38,.12);
+  --mel:#E39A0C;
+  --mel-claro:#FBD85D;
+  --favo:#FFF7E4;
+  --cera:#F1E3C0;
+  --papel:#FFFDF7;
+  --limite:#B4441B;
+  --limite-bg:#FBE9E1;
+  --atende:#2F6B4F;
+  --atende-bg:#E4F0E9;
+  --sombra:0 1px 0 rgba(7,12,38,.06), 0 12px 32px -24px rgba(7,12,38,.45);
+  --hex:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='42' height='72' viewBox='0 0 42 72'%3E%3Cg fill='none' stroke='%23E39A0C' stroke-width='1'%3E%3Cpath d='M21 -12L42 0L42 24L21 36L0 24L0 0Z'/%3E%3Cpath d='M0 12L21 24L21 48L0 60L-21 48L-21 24Z'/%3E%3Cpath d='M42 12L63 24L63 48L42 60L21 48L21 24Z'/%3E%3Cpath d='M21 60L42 72L42 96L21 108L0 96L0 72Z'/%3E%3C/g%3E%3C/svg%3E");
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--papel);
+  color:var(--tinta);
+  font-family:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:16px;
+  line-height:1.6;
+  font-variant-numeric:tabular-nums;
+}
+h1,h2,h3,h4{font-family:"Bricolage Grotesque","Instrument Sans",sans-serif;font-weight:800;letter-spacing:-.02em;line-height:1.05;margin:0}
+p{margin:0 0 1em}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+
+/* ---------- capa ---------- */
+.capa{position:relative;background:var(--tinta);color:var(--favo);overflow:hidden}
+.capa::before{content:"";position:absolute;inset:-40px;background-image:var(--hex);opacity:.22}
+.capa::after{content:"";position:absolute;left:0;right:0;bottom:0;height:180px;
+  background:linear-gradient(to top,rgba(7,12,38,.95),transparent)}
+.capa .wrap{position:relative;z-index:2;padding-top:56px;padding-bottom:52px}
+.marca{display:flex;align-items:center;gap:14px;margin-bottom:56px}
+.marca img{height:44px;width:auto;display:block}
+.marca span{font-size:13px;letter-spacing:.14em;color:rgba(255,247,228,.62);text-transform:uppercase}
+.capa h1{font-size:clamp(46px,9vw,104px);color:var(--mel-claro);max-width:12ch}
+.capa .sub{font-size:clamp(18px,2.4vw,24px);max-width:34ch;margin-top:20px;color:rgba(255,247,228,.9);font-weight:500;line-height:1.35}
+.meta{display:flex;flex-wrap:wrap;gap:0;margin-top:44px;border-top:1px solid rgba(251,216,93,.28)}
+.meta div{padding:16px 28px 4px 0;margin-right:28px;border-right:1px solid rgba(251,216,93,.18);min-width:150px}
+.meta div:last-child{border-right:0}
+.meta dt{font-size:12px;letter-spacing:.1em;color:rgba(255,247,228,.55);text-transform:uppercase;margin-bottom:4px}
+.meta dd{margin:0;font-size:16px;font-weight:600;color:var(--favo)}
+.abertura{background:var(--mel-claro);color:var(--tinta)}
+.abertura .wrap{padding:36px 24px}
+.abertura p{max-width:74ch;font-size:17px;margin:0}
+.abertura strong{font-weight:600}
+
+/* ---------- navegação ---------- */
+.nav{position:sticky;top:0;z-index:40;background:rgba(255,253,247,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--cera)}
+.nav .wrap{display:flex;gap:4px;padding:0 24px;overflow-x:auto;scrollbar-width:none}
+.nav .wrap::-webkit-scrollbar{display:none}
+.tab{appearance:none;border:0;background:none;cursor:pointer;white-space:nowrap;
+  font-family:inherit;font-size:15px;font-weight:600;color:var(--tinta-45);
+  padding:20px 18px 17px;border-bottom:3px solid transparent;transition:color .15s}
+.tab:hover{color:var(--tinta-70)}
+.tab[aria-selected="true"]{color:var(--tinta);border-bottom-color:var(--mel)}
+.tab:focus-visible{outline:2px solid var(--mel);outline-offset:-4px;border-radius:4px}
+.tab i{font-style:normal;color:var(--tinta-45);font-weight:500;margin-left:8px;font-size:13px}
+.tab[aria-selected="true"] i{color:var(--mel)}
+
+/* ---------- panels ---------- */
+.painel{display:none;padding:56px 0 96px}
+.painel.ativo{display:block}
+.chapeu{display:flex;align-items:baseline;gap:16px;margin-bottom:8px}
+.chapeu h2{font-size:clamp(30px,4.6vw,46px)}
+.painel>.wrap>p.intro{max-width:70ch;font-size:17px;color:var(--tinta-70);margin-bottom:44px}
+
+section{margin-bottom:64px}
+section>h3{font-size:22px;margin-bottom:6px}
+section>p.leg{color:var(--tinta-70);max-width:70ch;margin-bottom:22px}
+h4{font-size:16px;margin-bottom:8px}
+
+/* ---------- números ---------- */
+.numeros{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1px;background:var(--cera);
+  border:1px solid var(--cera);border-radius:2px;margin-bottom:56px}
+.numeros div{background:var(--favo);padding:22px 20px}
+.numeros b{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:38px;font-weight:800;line-height:1;letter-spacing:-.03em}
+.numeros span{display:block;margin-top:8px;font-size:13px;color:var(--tinta-70);line-height:1.35}
+
+/* ---------- tabelas ---------- */
+.rolagem{overflow-x:auto;border:1px solid var(--cera);border-radius:2px;background:var(--papel)}
+table{border-collapse:collapse;width:100%;font-size:14.5px}
+th,td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--cera);vertical-align:top}
+thead th{background:var(--tinta);color:var(--favo);font-weight:600;font-size:13px;letter-spacing:.02em}
+tbody tr:last-child td{border-bottom:0}
+tbody tr:nth-child(even) td{background:rgba(241,227,192,.22)}
+td.n,th.n{text-align:right;white-space:nowrap}
+.matriz th[scope=row]{position:sticky;left:0;background:var(--papel);font-weight:600;min-width:180px;border-right:1px solid var(--cera);z-index:2}
+.matriz tbody tr:nth-child(even) th[scope=row]{background:#FBF3E2}
+.pill{display:inline-block;padding:2px 9px;border-radius:999px;font-size:12px;font-weight:600;line-height:1.5;white-space:nowrap}
+.pill.sim{background:var(--atende-bg);color:var(--atende)}
+.pill.nao{background:var(--limite-bg);color:var(--limite)}
+.pill.na{background:var(--tinta-12);color:var(--tinta-70)}
+.fonte{font-size:12.5px;color:var(--tinta-45);margin-top:10px}
+
+/* ---------- gráficos ---------- */
+.graficos{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px}
+.grafico{border:1px solid var(--cera);border-radius:2px;padding:20px 22px 18px;background:var(--favo)}
+.grafico h4{margin-bottom:2px}
+.grafico .nota{font-size:12.5px;color:var(--tinta-70);margin-bottom:18px}
+.barras{display:flex;flex-direction:column;gap:9px;position:relative}
+.barra{display:grid;grid-template-columns:96px 1fr auto;align-items:center;gap:10px;font-size:13px}
+.barra .rot{color:var(--tinta-70);text-align:right;line-height:1.2;font-size:12.5px}
+.barra .trilho{height:16px;background:rgba(7,12,38,.07);border-radius:1px;position:relative}
+.barra .fill{position:absolute;left:0;top:0;bottom:0;background:var(--mel);border-radius:1px}
+.barra.destaque .fill{background:var(--tinta)}
+.barra .val{font-weight:600;min-width:52px;text-align:right;font-size:13px}
+.faixa{position:absolute;top:0;bottom:0;left:calc(37.5% + 43px);right:62px;background:rgba(47,107,79,.13);border-left:1px dashed rgba(47,107,79,.6);pointer-events:none}
+.legenda-faixa{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--tinta-70);margin-top:14px}
+.legenda-faixa i{display:block;width:22px;height:12px;background:rgba(47,107,79,.13);border-left:1px dashed rgba(47,107,79,.6);border-right:1px dashed rgba(47,107,79,.6)}
+
+/* ---------- cards de marca ---------- */
+.marcas{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px}
+.card{border:1px solid var(--cera);border-radius:2px;background:var(--papel);padding:22px 22px 20px;position:relative}
+.card.ref{border-color:var(--mel);box-shadow:inset 3px 0 0 var(--mel)}
+.card .tag{position:absolute;top:-1px;right:-1px;background:var(--mel);color:var(--tinta);font-size:11px;font-weight:600;letter-spacing:.06em;padding:4px 10px;text-transform:uppercase}
+.card h4{font-size:19px;font-family:"Bricolage Grotesque",sans-serif;letter-spacing:-.02em}
+.card .sabor{color:var(--tinta-45);font-size:13.5px;margin-bottom:14px}
+.card .preco{font-family:"Bricolage Grotesque",sans-serif;font-size:26px;font-weight:700;letter-spacing:-.02em}
+.card .preco small{font-size:13px;font-weight:400;color:var(--tinta-45);font-family:"Instrument Sans",sans-serif;letter-spacing:0;margin-left:6px}
+.mini{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--cera);border:1px solid var(--cera);margin:16px 0}
+.mini div{background:var(--favo);padding:8px 6px;text-align:center}
+.mini b{display:block;font-size:15px;font-weight:600}
+.mini span{display:block;font-size:10.5px;color:var(--tinta-45);letter-spacing:.03em;margin-top:1px}
+.card dl{margin:0;font-size:13.5px}
+.card dt{font-weight:600;margin-top:12px;font-size:12px;letter-spacing:.06em;color:var(--tinta-45);text-transform:uppercase}
+.card dd{margin:3px 0 0;color:var(--tinta-70);line-height:1.5}
+.card dd.limite{color:var(--limite)}
+
+/* ---------- acordeão ---------- */
+details{border:1px solid var(--cera);border-radius:2px;background:var(--papel);margin-bottom:10px}
+details[open]{background:var(--favo)}
+summary{cursor:pointer;padding:15px 20px;font-weight:600;font-size:16px;list-style:none;display:flex;align-items:center;gap:14px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";margin-left:auto;width:9px;height:9px;border-right:2px solid var(--mel);border-bottom:2px solid var(--mel);transform:rotate(45deg) translateY(-3px);transition:transform .18s}
+details[open] summary::after{transform:rotate(-135deg) translateY(-3px)}
+summary:focus-visible{outline:2px solid var(--mel);outline-offset:-2px}
+summary .hexnum{flex:none;width:26px;height:29px;background:var(--mel-claro);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);
+  display:grid;place-items:center;font-size:12px;font-weight:700;color:var(--tinta)}
+.corpo{padding:2px 20px 20px 60px}
+.corpo>*:last-child{margin-bottom:0}
+.corpo h5{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--tinta-45);margin:18px 0 6px;font-weight:600}
+.corpo ul{margin:0 0 4px;padding-left:20px}
+.corpo li{margin-bottom:5px}
+.corpo li::marker{color:var(--mel)}
+
+/* ---------- segmentado ---------- */
+.seg{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px}
+.seg button{appearance:none;font-family:inherit;font-size:13.5px;font-weight:600;cursor:pointer;
+  padding:8px 16px;border:1px solid var(--cera);background:var(--papel);color:var(--tinta-70);border-radius:999px}
+.seg button[aria-pressed="true"]{background:var(--tinta);border-color:var(--tinta);color:var(--favo)}
+.seg button:focus-visible{outline:2px solid var(--mel);outline-offset:2px}
+.limite-tab{display:none}
+.limite-tab.ativo{display:block}
+
+/* ---------- avisos ---------- */
+.aviso{border-left:4px solid var(--mel);background:var(--favo);padding:18px 22px;margin:0 0 24px;border-radius:0 2px 2px 0}
+.aviso p:last-child{margin-bottom:0}
+.aviso.forte{border-left-color:var(--limite);background:var(--limite-bg)}
+.rotulo{display:grid;gap:8px;margin:16px 0 0}
+.rotulo b{display:block;border:1.5px solid var(--tinta);padding:11px 16px;font-size:14px;font-weight:700;letter-spacing:.02em;text-align:center;background:var(--papel)}
+.rotulo b.cafeina{border-color:var(--limite);color:var(--limite)}
+
+/* ---------- passos ---------- */
+ol.passos{list-style:none;counter-reset:p;margin:0;padding:0;display:grid;gap:2px}
+ol.passos li{counter-increment:p;display:grid;grid-template-columns:44px 1fr;gap:16px;padding:16px 0;border-top:1px solid var(--cera)}
+ol.passos li::before{content:counter(p,decimal-leading-zero);font-family:"Bricolage Grotesque",sans-serif;font-size:22px;font-weight:700;color:var(--mel);line-height:1.2}
+ol.passos li:last-child{border-bottom:1px solid var(--cera)}
+
+/* ---------- formulações ---------- */
+.forms{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:22px;align-items:start}
+.form-card{border:1px solid var(--cera);border-radius:2px;overflow:hidden;background:var(--papel)}
+.form-card header{background:var(--tinta);color:var(--favo);padding:20px 22px}
+.form-card header b{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--mel-claro);margin-bottom:6px}
+.form-card header h4{font-size:21px;font-family:"Bricolage Grotesque",sans-serif;color:var(--favo)}
+.form-card header p{margin:10px 0 0;font-size:13.5px;color:rgba(255,247,228,.78);line-height:1.5}
+.form-card table{font-size:13.5px}
+.form-card td:first-child{font-weight:500}
+.form-card .fn{color:var(--tinta-45);font-size:12.5px}
+
+/* ---------- rodapé ---------- */
+.rodape{background:var(--tinta);color:rgba(255,247,228,.7);padding:48px 0 56px;font-size:14px}
+.rodape .wrap{display:flex;flex-wrap:wrap;gap:32px;align-items:flex-start;justify-content:space-between}
+.rodape img{height:38px;opacity:.9}
+.equipe{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px 32px;flex:1;min-width:280px}
+.equipe div b{display:block;color:var(--favo);font-weight:600}
+.equipe div span{font-size:13px}
+
+@media (max-width:640px){
+  .wrap{padding:0 18px}
+  .capa .wrap{padding-top:36px;padding-bottom:40px}
+  .marca{margin-bottom:36px}
+  .meta div{border-right:0;padding-right:0;margin-right:0;min-width:46%}
+  .corpo{padding-left:20px}
+  .mini{grid-template-columns:repeat(2,1fr)}
+  .barra{grid-template-columns:78px 1fr auto}
+  .faixa{left:calc(37.5% + 32px)}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+@media print{
+  .nav{display:none}
+  .painel{display:block!important;page-break-before:always;padding:24px 0}
+  .capa::before{display:none}
+  details{border:0}
+  details .corpo{display:block!important}
+  summary::after{display:none}
+  .limite-tab{display:block!important}
+  .seg{display:none}
+  body{font-size:11pt}
+}
+</style>
+</head>
+<body>
+<header class="capa">
+  <div class="wrap">
+    <div class="marca">
+      <img src="data:image/png;base64,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" alt="EJEQ">
+      <span>EJEQ · Engenharia Química · UFPR</span>
+    </div>
+    <h1>Análise Técnica</h1>
+    <p class="sub">Estudo de viabilidade para um gel de carboidrato à base de mel</p>
+    <dl class="meta">
+      <div><dt>Cliente</dt><dd>Rosecleia e Danielly</dd></div>
+      <div><dt>Entrega</dt><dd>1 de 3 · Análise Técnica</dd></div>
+      <div><dt>Data</dt><dd>Setembro de 2026</dd></div>
+      <div><dt>Supervisão</dt><dd>Profa. Myriam Cerutti</dd></div>
+    </dl>
+  </div>
+</header>
+
+<div class="abertura">
+  <div class="wrap">
+    <p>Esta é a <strong>primeira entrega</strong> do projeto. Ela reúne o que o mercado já oferece em géis de carboidrato, o que a legislação brasileira permite dizer e usar no produto, e três formulações teóricas que servem de ponto de partida para a bancada. As formulações ainda precisam ser validadas em laboratório.</p>
+  </div>
+</div>
+
+<nav class="nav" aria-label="Seções do relatório">
+  <div class="wrap" role="tablist">
+    <button class="tab" role="tab" id="tab-mercado" aria-controls="p-mercado" aria-selected="true">Análise dos concorrentes<i>7 marcas</i></button>
+    <button class="tab" role="tab" id="tab-legis" aria-controls="p-legis" aria-selected="false">Análise da legislação<i>ANVISA e MAPA</i></button>
+    <button class="tab" role="tab" id="tab-form" aria-controls="p-form" aria-selected="false">Formulações teóricas<i>3 rotas</i></button>
+  </div>
+</nav>
+
+<!-- ================= MERCADO ================= -->
+<main>
+<div class="painel ativo" id="p-mercado" role="tabpanel" aria-labelledby="tab-mercado">
+<div class="wrap">
+  <div class="chapeu"><h2>Análise dos concorrentes</h2></div>
+  <p class="intro">Oito produtos de sete marcas, comparados por preço, composição e tabela nutricional. A referência definida na reunião de alinhamento é o EnergyGel da Action Bee. Os demais entram para mostrar o que existe de eletrólito, cafeína, vitamina e mel disponível hoje na prateleira.</p>
+
+  <div class="numeros">
+    <div><b>8</b><span>produtos analisados, de 7 marcas</span></div>
+    <div><b>3</b><span>têm mel como fonte de carboidrato</span></div>
+    <div><b>5</b><span>declaram cafeína no rótulo</span></div>
+    <div><b>R$5,77</b><span>menor preço unitário (Probiótica)</span></div>
+    <div><b>R$15,99</b><span>maior preço unitário (Z2)</span></div>
+  </div>
+
+  <section>
+    <h3>Matriz comparativa</h3>
+    <p class="leg">Valores por sachê, conforme rótulo de cada fabricante. As linhas de mel, cafeína e vitaminas são as que separam os produtos em relação ao briefing da cliente.</p>
+    <div class="rolagem">
+      <table class="matriz">
+        <thead>
+          <tr>
+            <th scope="col">&nbsp;</th>
+            <th scope="col">Action Bee<br><span style="font-weight:400;opacity:.7">Mel energético</span></th>
+            <th scope="col">GU<br><span style="font-weight:400;opacity:.7">Caramelo</span></th>
+            <th scope="col">Honey Stinger<br><span style="font-weight:400;opacity:.7">Gold</span></th>
+            <th scope="col">Honey Stinger<br><span style="font-weight:400;opacity:.7">Caramelo salgado</span></th>
+            <th scope="col">Z2 Performance<br><span style="font-weight:400;opacity:.7">Double Expresso</span></th>
+            <th scope="col">Lavitan<br><span style="font-weight:400;opacity:.7">Caramelo</span></th>
+            <th scope="col">Probiótica<br><span style="font-weight:400;opacity:.7">Carb Up Black</span></th>
+            <th scope="col">Integralmedica<br><span style="font-weight:400;opacity:.7">Salted caramel</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Preço unitário</th><td class="n">R$ 11,99</td><td class="n">R$ 14,90</td><td class="n">R$ 8,46</td><td class="n">R$ 8,46</td><td class="n">R$ 15,99</td><td class="n">R$ 10,10</td><td class="n">R$ 5,77</td><td class="n">R$ 6,20</td></tr>
+          <tr><th scope="row">Porção</th><td class="n">26 g</td><td class="n">32 g</td><td class="n">31 g</td><td class="n">31 g</td><td class="n">40 g</td><td class="n">40 g</td><td class="n">30 g</td><td class="n">45 g</td></tr>
+          <tr><th scope="row">Valor energético</th><td class="n">80 kcal</td><td class="n">92 kcal</td><td class="n">90 kcal</td><td class="n">100 kcal</td><td class="n">100 kcal</td><td class="n">104 kcal</td><td class="n">84 kcal</td><td class="n">128 kcal</td></tr>
+          <tr><th scope="row">Carboidratos</th><td class="n">20 g</td><td class="n">23 g</td><td class="n">24 g</td><td class="n">24 g</td><td class="n">25 g</td><td class="n">26 g</td><td class="n">21 g</td><td class="n">32 g</td></tr>
+          <tr><th scope="row">Açúcares adicionados</th><td class="n">0 g</td><td class="n">0 g</td><td class="n">24 g</td><td class="n">11 g</td><td class="n">13 g</td><td class="n">12 g</td><td class="n">7,3 g</td><td class="n">15 g</td></tr>
+          <tr><th scope="row">Sódio</th><td class="n">1,5 mg</td><td class="n">125 mg</td><td class="n">45 mg</td><td class="n">60 mg</td><td class="n">100 mg</td><td class="n">401 mg</td><td class="n">14 mg</td><td class="n">106 mg</td></tr>
+          <tr><th scope="row">Potássio</th><td class="n">&mdash;</td><td class="n">&mdash;</td><td class="n">58 mg</td><td class="n">50 mg</td><td class="n">&mdash;</td><td class="n">&mdash;</td><td class="n">&mdash;</td><td class="n">&mdash;</td></tr>
+          <tr><th scope="row">Cafeína</th><td class="n">70 mg</td><td class="n">0 mg</td><td class="n">0 mg</td><td class="n">70 mg</td><td class="n">200 mg</td><td class="n">0 mg</td><td class="n">8,1 mg</td><td class="n">85 mg</td></tr>
+          <tr><th scope="row">Taurina</th><td class="n">201 mg</td><td class="n">&mdash;</td><td class="n">&mdash;</td><td class="n">&mdash;</td><td class="n">500 mg</td><td class="n">&mdash;</td><td class="n">93 mg</td><td class="n">&mdash;</td></tr>
+          <tr><th scope="row">Mel na formulação</th><td><span class="pill sim">Sim</span></td><td><span class="pill nao">Não</span></td><td><span class="pill sim">Sim</span></td><td><span class="pill sim">Sim</span></td><td><span class="pill nao">Não</span></td><td><span class="pill nao">Não</span></td><td><span class="pill nao">Não</span></td><td><span class="pill nao">Não</span></td></tr>
+          <tr><th scope="row">Vitaminas</th><td>C e B1</td><td><span class="pill na">Nenhuma</span></td><td>Complexo B</td><td><span class="pill na">Nenhuma</span></td><td><span class="pill na">Nenhuma</span></td><td><span class="pill na">Nenhuma</span></td><td>Complexo B</td><td><span class="pill na">Nenhuma</span></td></tr>
+          <tr><th scope="row">Conservantes</th><td><span class="pill sim">Não usa</span></td><td><span class="pill nao">Usa</span></td><td><span class="pill sim">Não usa</span></td><td><span class="pill nao">Usa</span></td><td><span class="pill nao">Usa</span></td><td><span class="pill nao">Usa</span></td><td><span class="pill nao">Usa</span></td><td><span class="pill nao">Usa</span></td></tr>
+          <tr><th scope="row">Eletrólitos</th><td><span class="pill nao">Não</span></td><td><span class="pill sim">Sim</span></td><td><span class="pill sim">Sim</span></td><td><span class="pill sim">Sim</span></td><td><span class="pill sim">Sim</span></td><td><span class="pill sim">Sim</span></td><td><span class="pill sim">Sim</span></td><td><span class="pill sim">Sim</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="fonte">Fonte: rótulos e sites dos fabricantes, consultados em julho e agosto de 2026. Traço indica valor não declarado no rótulo.</p>
+  </section>
+
+  <section>
+    <h3>Onde cada produto se posiciona</h3>
+    <p class="leg">Três leituras rápidas dos mesmos dados: quanto custa, quanto estimula e quanto repõe sódio.</p>
+    <div class="graficos">
+
+      <div class="grafico">
+        <h4>Preço por sachê</h4>
+        <p class="nota">Preço unitário de varejo, em reais.</p>
+        <div class="barras">
+          <div class="barra"><span class="rot">Probiótica</span><span class="trilho"><span class="fill" style="width:36%"></span></span><span class="val">5,77</span></div>
+          <div class="barra"><span class="rot">Integralmedica</span><span class="trilho"><span class="fill" style="width:39%"></span></span><span class="val">6,20</span></div>
+          <div class="barra"><span class="rot">Honey Stinger</span><span class="trilho"><span class="fill" style="width:53%"></span></span><span class="val">8,46</span></div>
+          <div class="barra"><span class="rot">Lavitan</span><span class="trilho"><span class="fill" style="width:63%"></span></span><span class="val">10,10</span></div>
+          <div class="barra destaque"><span class="rot">Action Bee</span><span class="trilho"><span class="fill" style="width:75%"></span></span><span class="val">11,99</span></div>
+          <div class="barra"><span class="rot">GU</span><span class="trilho"><span class="fill" style="width:93%"></span></span><span class="val">14,90</span></div>
+          <div class="barra"><span class="rot">Z2</span><span class="trilho"><span class="fill" style="width:100%"></span></span><span class="val">15,99</span></div>
+        </div>
+        <p class="legenda-faixa" style="border:0"><i style="background:var(--tinta);border:0"></i> Referência do projeto</p>
+      </div>
+
+      <div class="grafico">
+        <h4>Cafeína por sachê</h4>
+        <p class="nota">Em miligramas, com a faixa permitida pela IN nº 28/2018 para maiores de 19 anos.</p>
+        <div class="barras">
+          <span class="faixa" aria-hidden="true"></span>
+          <div class="barra"><span class="rot">Z2</span><span class="trilho"><span class="fill" style="width:100%"></span></span><span class="val">200</span></div>
+          <div class="barra"><span class="rot">Integralmedica</span><span class="trilho"><span class="fill" style="width:42.5%"></span></span><span class="val">85</span></div>
+          <div class="barra destaque"><span class="rot">Action Bee</span><span class="trilho"><span class="fill" style="width:35%"></span></span><span class="val">70</span></div>
+          <div class="barra"><span class="rot">HS Caramelo</span><span class="trilho"><span class="fill" style="width:35%"></span></span><span class="val">70</span></div>
+          <div class="barra"><span class="rot">Probiótica</span><span class="trilho"><span class="fill" style="width:4%"></span></span><span class="val">8,1</span></div>
+          <div class="barra"><span class="rot">GU</span><span class="trilho"><span class="fill" style="width:0"></span></span><span class="val">0</span></div>
+          <div class="barra"><span class="rot">HS Gold</span><span class="trilho"><span class="fill" style="width:0"></span></span><span class="val">0</span></div>
+          <div class="barra"><span class="rot">Lavitan</span><span class="trilho"><span class="fill" style="width:0"></span></span><span class="val">0</span></div>
+        </div>
+        <p class="legenda-faixa"><i></i> 75 mg a 200 mg: faixa em que a alegação de cafeína é permitida</p>
+      </div>
+
+      <div class="grafico">
+        <h4>Sódio por sachê</h4>
+        <p class="nota">Em miligramas. Mostra quem trata o gel como repositor de eletrólitos e quem não trata.</p>
+        <div class="barras">
+          <div class="barra"><span class="rot">Lavitan</span><span class="trilho"><span class="fill" style="width:100%"></span></span><span class="val">401</span></div>
+          <div class="barra"><span class="rot">GU</span><span class="trilho"><span class="fill" style="width:31%"></span></span><span class="val">125</span></div>
+          <div class="barra"><span class="rot">Integralmedica</span><span class="trilho"><span class="fill" style="width:26%"></span></span><span class="val">106</span></div>
+          <div class="barra"><span class="rot">Z2</span><span class="trilho"><span class="fill" style="width:25%"></span></span><span class="val">100</span></div>
+          <div class="barra"><span class="rot">HS Caramelo</span><span class="trilho"><span class="fill" style="width:15%"></span></span><span class="val">60</span></div>
+          <div class="barra"><span class="rot">HS Gold</span><span class="trilho"><span class="fill" style="width:11%"></span></span><span class="val">45</span></div>
+          <div class="barra"><span class="rot">Probiótica</span><span class="trilho"><span class="fill" style="width:3.5%"></span></span><span class="val">14</span></div>
+          <div class="barra destaque"><span class="rot">Action Bee</span><span class="trilho"><span class="fill" style="width:0.4%"></span></span><span class="val">1,5</span></div>
+        </div>
+        <p class="legenda-faixa" style="border:0"><i style="background:var(--tinta);border:0"></i> A referência do projeto praticamente não repõe sódio</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h3>Produto a produto</h3>
+    <p class="leg">Ingredientes declarados e as limitações de cada um frente ao que a cliente pediu: mel como fonte de carboidrato, eletrólitos, cafeína e ausência de conservantes artificiais.</p>
+    <div class="marcas">
+
+      <article class="card ref">
+        <span class="tag">Referência</span>
+        <h4>Action Bee EnergyGel</h4>
+        <p class="sabor">Mel energético · caixa com 10 por R$ 119,99</p>
+        <p class="preco">R$ 11,99<small>por sachê de 26 g</small></p>
+        <div class="mini">
+          <div><b>80</b><span>KCAL</span></div>
+          <div><b>20 g</b><span>CARBO</span></div>
+          <div><b>70</b><span>MG CAFEÍNA</span></div>
+          <div><b>1,5</b><span>MG SÓDIO</span></div>
+        </div>
+        <dl>
+          <dt>Ingredientes</dt>
+          <dd>Mel, taurina, cafeína anidra, vitamina C e ácido cítrico.</dd>
+          <dt>Por que é a referência</dt>
+          <dd>É a formulação mais próxima do produto idealizado: sem carboidratos industriais, açúcares adicionados, corantes artificiais, glúten, lactose ou aromatizantes artificiais. O mel entrega energia rápida e sabor agradável, e os estimulantes ajudam no foco.</dd>
+          <dt>Limitações</dt>
+          <dd class="limite">Funciona apenas como repositor de carboidratos. Não tem eletrólitos. Como todo gel concentrado, exige água junto: a alta concentração de carboidratos desvia água para o trato gastrointestinal e pode gerar desidratação e desconforto intestinal. A cafeína pode causar agitação, tremores ou taquicardia em pessoas sensíveis, efeito que a taurina ajuda a estabilizar.</dd>
+        </dl>
+      </article>
+
+      <article class="card">
+        <h4>GU Energy Gel</h4>
+        <p class="sabor">Caramelo · caixa com 24 por R$ 357,60</p>
+        <p class="preco">R$ 14,90<small>por sachê de 32 g</small></p>
+        <div class="mini">
+          <div><b>92</b><span>KCAL</span></div>
+          <div><b>23 g</b><span>CARBO</span></div>
+          <div><b>0</b><span>MG CAFEÍNA</span></div>
+          <div><b>125</b><span>MG SÓDIO</span></div>
+        </div>
+        <dl>
+          <dt>Ingredientes</dt>
+          <dd>Maltodextrina, água, frutose, citrato de potássio, ácido cítrico, citrato de sódio, carbonato de cálcio, cloreto de sódio, óleo de girassol, espessante goma gelana, benzoato de sódio, sorbato de potássio e aroma.</dd>
+          <dt>Leitura</dt>
+          <dd>Blend de carboidratos com velocidades de absorção diferentes: os menores liberam glicose quase de imediato, os maiores liberam de forma gradual. A goma gelana deixa a textura densa, próxima de leite condensado, e os aromas e sais tornam o caramelo predominante.</dd>
+          <dt>Limitações</dt>
+          <dd class="limite">Conservantes artificiais e aromatizantes. Não leva mel.</dd>
+        </dl>
+      </article>
+
+      <article class="card">
+        <h4>Honey Stinger Gold</h4>
+        <p class="sabor">Sabor tradicional da marca · caixa com 24 por R$ 203,12</p>
+        <p class="preco">R$ 8,46<small>por sachê de 31 g</small></p>
+        <div class="mini">
+          <div><b>90</b><span>KCAL</span></div>
+          <div><b>24 g</b><span>CARBO</span></div>
+          <div><b>0</b><span>MG CAFEÍNA</span></div>
+          <div><b>45</b><span>MG SÓDIO</span></div>
+        </div>
+        <dl>
+          <dt>Ingredientes</dt>
+          <dd>Mel, sal, citrato de potássio, niacinamida (B3), pantotenato de cálcio (B5), cloridrato de piridoxina (B6), riboflavina (B2), mononitrato de tiamina (B1) e cianocobalamina (B12).</dd>
+          <dt>Leitura</dt>
+          <dd>É o produto que mais se aproxima da ideia da cliente: mel, eletrólitos e complexo B, associado à manutenção do sistema nervoso e à produção de energia. O sabor de mel é predominante e não provoca desconforto gástrico durante o exercício. Com mel na fórmula, pode cristalizar perto de 12 °C e perder a textura esperada.</dd>
+          <dt>Limitações</dt>
+          <dd class="limite">Não tem cafeína.</dd>
+        </dl>
+      </article>
+
+      <article class="card">
+        <h4>Honey Stinger Caramelo Salgado</h4>
+        <p class="sabor">Latte de caramelo salgado · caixa com 24 por R$ 203,12</p>
+        <p class="preco">R$ 8,46<small>por sachê de 31 g</small></p>
+        <div class="mini">
+          <div><b>100</b><span>KCAL</span></div>
+          <div><b>24 g</b><span>CARBO</span></div>
+          <div><b>70</b><span>MG CAFEÍNA</span></div>
+          <div><b>60</b><span>MG SÓDIO</span></div>
+        </div>
+        <dl>
+          <dt>Ingredientes</dt>
+          <dd>Mel, xarope de tapioca orgânica, flavorizante, citrato de potássio, sal, água, ácido cítrico e cafeína orgânica de chá verde.</dd>
+          <dt>Leitura</dt>
+          <dd>Traz a cafeína que falta no Gold, mantendo o mel. A água e o xarope deixam o mel mais fluido e o gel mais fácil de ingerir. O xarope, porém, encarece a fabricação em relação à maltodextrina, e a quantidade de frutose puxa água para o intestino se o atleta não beber água depois.</dd>
+          <dt>Limitações</dt>
+          <dd class="limite">Ácido cítrico e citrato de potássio como conservantes, ausência de vitaminas e sabor diferente do definido na reunião de alinhamento.</dd>
+        </dl>
+      </article>
+
+      <article class="card">
+        <h4>Z2 Performance Z2+</h4>
+        <p class="sabor">Double Expresso</p>
+        <p class="preco">R$ 15,99<small>por sachê de 40 g</small></p>
+        <div class="mini">
+          <div><b>100</b><span>KCAL</span></div>
+          <div><b>25 g</b><span>CARBO</span></div>
+          <div><b>200</b><span>MG CAFEÍNA</span></div>
+          <div><b>100</b><span>MG SÓDIO</span></div>
+        </div>
+        <dl>
+          <dt>Ingredientes</dt>
+          <dd>Água, maltodextrina, D-frutose, isomaltulose, café solúvel, cafeína, taurina, cacau em pó, citrato trissódico, aromatizante e sorbato de potássio.</dd>
+          <dt>Leitura</dt>
+          <dd>Sensorialmente lembra um café expresso, com notas de chocolate do cacau e um fundo salgado vindo do sorbato de potássio e do citrato trissódico. A textura é mais fluida que a dos géis de mel, o que torna o consumo mais agradável.</dd>
+          <dt>Limitações</dt>
+          <dd class="limite">Conservantes e ausência de mel. A carga de estimulantes é alta e pode gerar ansiedade e palpitações, ainda que a taurina estabilize parte do efeito.</dd>
+        </dl>
+      </article>
+
+      <article class="card">
+        <h4>Lavitan Carbo Gel</h4>
+        <p class="sabor">Caramelo</p>
+        <p class="preco">R$ 10,10<small>por sachê de 40 g</small></p>
+        <div class="mini">
+          <div><b>104</b><span>KCAL</span></div>
+          <div><b>26 g</b><span>CARBO</span></div>
+          <div><b>0</b><span>MG CAFEÍNA</span></div>
+          <div><b>401</b><span>MG SÓDIO</span></div>
+        </div>
+        <dl>
+          <dt>Ingredientes</dt>
+          <dd>Blend de carboidratos (maltodextrina, palatinose e frutose), xarope de glicose, citrato trissódico, citrato de potássio, aromatizantes, ácido cítrico e sorbato de potássio.</dd>
+          <dt>Leitura</dt>
+          <dd>Blend com níveis de absorção diferentes, voltado a manter a performance e repor energia durante o treino. É o produto com maior teor de sódio da amostra.</dd>
+          <dt>Limitações</dt>
+          <dd class="limite">Repositor de carboidratos com açúcares adicionados, sem cafeína nem taurina. Tem conservantes e não leva mel.</dd>
+        </dl>
+      </article>
+
+      <article class="card">
+        <h4>Probiótica Carb Up Gel Black</h4>
+        <p class="sabor">Caramelo salgado · caixa com 10 por R$ 57,78</p>
+        <p class="preco">R$ 5,77<small>por sachê de 30 g</small></p>
+        <div class="mini">
+          <div><b>84</b><span>KCAL</span></div>
+          <div><b>21 g</b><span>CARBO</span></div>
+          <div><b>8,1</b><span>MG CAFEÍNA</span></div>
+          <div><b>14</b><span>MG SÓDIO</span></div>
+        </div>
+        <dl>
+          <dt>Ingredientes</dt>
+          <dd>Maltodextrina, água purificada, taurina, cafeína, glucoronolactona, vitaminas do complexo B, cloreto de sódio, amido de milho ceroso (waxy maize), citrato monossódico, aromatizantes, sorbato de potássio, benzoato de sódio, ácido fosfórico e sucralose.</dd>
+          <dt>Leitura</dt>
+          <dd>Atende à expectativa de um gel de carboidrato com vitaminas e é o mais barato da amostra.</dd>
+          <dt>Limitações</dt>
+          <dd class="limite">Lista de ingredientes longa, com muitos aditivos. Tem conservantes e não leva mel.</dd>
+        </dl>
+      </article>
+
+      <article class="card">
+        <h4>Integralmedica Energy Gel VO₂ C30</h4>
+        <p class="sabor">Salted caramel · caixa com 10 por R$ 62,00</p>
+        <p class="preco">R$ 6,20<small>por sachê de 45 g</small></p>
+        <div class="mini">
+          <div><b>128</b><span>KCAL</span></div>
+          <div><b>32 g</b><span>CARBO</span></div>
+          <div><b>85</b><span>MG CAFEÍNA</span></div>
+          <div><b>106</b><span>MG SÓDIO</span></div>
+        </div>
+        <dl>
+          <dt>Ingredientes</dt>
+          <dd>Maltodextrina, D-frutose, cafeína, cloreto de sódio, aromatizantes, citrato trissódico, benzoato de sódio e sorbato de potássio.</dd>
+          <dt>Leitura</dt>
+          <dd>Combina cafeína, sal e carboidratos, e é o sachê com maior carga de carboidrato da amostra.</dd>
+          <dt>Limitações</dt>
+          <dd class="limite">Conservantes, ausência de mel e ausência de vitaminas.</dd>
+        </dl>
+      </article>
+
+    </div>
+  </section>
+
+  <section>
+    <h3>Ingredientes vistos no mercado, por função</h3>
+    <p class="leg">Reunião de tudo que apareceu nos oito rótulos, organizado pelo papel que cada ingrediente cumpre na formulação. Serve como cardápio de opções para as decisões de bancada.</p>
+
+    <details open>
+      <summary><span class="hexnum">1</span>Fonte de carboidratos e energia</summary>
+      <div class="corpo">
+        <div class="rolagem"><table>
+          <thead><tr><th style="width:30%">Ingrediente</th><th>Função</th></tr></thead>
+          <tbody>
+            <tr><td>Mel</td><td>Fonte natural de carboidratos simples, principalmente glicose e frutose, com energia rapidamente disponível para a atividade física.</td></tr>
+            <tr><td>Maltodextrina</td><td>Carboidrato de rápida digestão que fornece energia e ajuda a evitar a cristalização do produto.</td></tr>
+            <tr><td>Frutose</td><td>Monossacarídeo que atua como fonte de energia junto a outros carboidratos.</td></tr>
+            <tr><td>Xarope de tapioca orgânica</td><td>Fornece energia e auxilia na redução da cristalização e da doçura excessiva.</td></tr>
+            <tr><td>Isomaltulose (palatinose)</td><td>Carboidrato de digestão e absorção mais gradual, para fornecimento prolongado de energia.</td></tr>
+            <tr><td>Blend de carboidratos<br><span style="color:var(--tinta-45);font-size:12.5px">maltodextrina, palatinose e frutose</span></td><td>Combinação com características de absorção diferentes, cobrindo o fornecimento de energia ao longo da atividade.</td></tr>
+            <tr><td>Xarope de glicose</td><td>Glicose prontamente disponível, que também contribui para a textura do gel.</td></tr>
+            <tr><td>Glucoronolactona</td><td>Componente usado em formulações energéticas, associado ao metabolismo energético.</td></tr>
+            <tr><td>Amido de milho ceroso (waxy maize)</td><td>Fonte adicional de carboidratos, contribui para textura e consistência.</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="hexnum">2</span>Estimulantes e suporte ao desempenho</summary>
+      <div class="corpo">
+        <div class="rolagem"><table>
+          <thead><tr><th style="width:30%">Ingrediente</th><th>Função</th></tr></thead>
+          <tbody>
+            <tr><td>Cafeína</td><td>Estimulante que pode contribuir para o estado de alerta, a concentração e a redução da percepção de fadiga.</td></tr>
+            <tr><td>Cafeína orgânica de chá verde</td><td>Fonte de cafeína com apelo natural, contribuindo para o efeito estimulante durante a atividade física.</td></tr>
+            <tr><td>Taurina</td><td>Associada à função muscular e ao metabolismo energético, usada em formulações de suporte ao desempenho físico.</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="hexnum">3</span>Vitaminas e micronutrientes</summary>
+      <div class="corpo">
+        <div class="rolagem"><table>
+          <thead><tr><th style="width:30%">Ingrediente</th><th>Função</th></tr></thead>
+          <tbody>
+            <tr><td>Vitamina C</td><td>Nutriente com função antioxidante e participação em diversas funções metabólicas.</td></tr>
+            <tr><td>Niacinamida (vitamina B3)</td><td>Participa de processos metabólicos ligados à produção de energia e ao funcionamento do sistema nervoso.</td></tr>
+            <tr><td>Pantotenato de cálcio (vitamina B5)</td><td>Participa do metabolismo energético e da produção de energia celular.</td></tr>
+            <tr><td>Outras vitaminas do complexo B</td><td>Atuam principalmente no metabolismo energético e no funcionamento adequado do sistema nervoso.</td></tr>
+            <tr><td>Carbonato de cálcio</td><td>Fonte de cálcio.</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="hexnum">4</span>Hidratação e reposição de eletrólitos</summary>
+      <div class="corpo">
+        <div class="rolagem"><table>
+          <thead><tr><th style="width:30%">Ingrediente</th><th>Função</th></tr></thead>
+          <tbody>
+            <tr><td>Água</td><td>Principal solvente da formulação, contribui para a hidratação.</td></tr>
+            <tr><td>Citrato de sódio</td><td>Fonte de sódio e regulador de acidez.</td></tr>
+            <tr><td>Citrato trissódico</td><td>Regulador de acidez e fonte de sódio.</td></tr>
+            <tr><td>Cloreto de sódio</td><td>Fonte de sódio e eletrólito, contribui para a manutenção do equilíbrio hidroeletrolítico.</td></tr>
+            <tr><td>Citrato de potássio</td><td>Fonte de potássio e agente regulador de acidez.</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="hexnum">5</span>Regulação de acidez e estabilidade</summary>
+      <div class="corpo">
+        <div class="rolagem"><table>
+          <thead><tr><th style="width:30%">Ingrediente</th><th>Função</th></tr></thead>
+          <tbody>
+            <tr><td>Ácido cítrico</td><td>Acidulante que ajusta o pH, realça o sabor e contribui para a estabilidade do produto.</td></tr>
+            <tr><td>Citrato de potássio</td><td>Regulador de acidez, contribui para o equilíbrio da formulação.</td></tr>
+            <tr><td>Citrato de sódio</td><td>Regulador de acidez, auxilia no controle do pH.</td></tr>
+            <tr><td>Citrato trissódico</td><td>Regula a acidez, auxiliando no ajuste do pH e na estabilidade.</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="hexnum">6</span>Conservação, textura e sabor</summary>
+      <div class="corpo">
+        <div class="rolagem"><table>
+          <thead><tr><th style="width:30%">Ingrediente</th><th>Função</th></tr></thead>
+          <tbody>
+            <tr><td>Benzoato de sódio</td><td>Conservante antimicrobiano, aumenta a estabilidade e a vida de prateleira.</td></tr>
+            <tr><td>Sorbato de potássio</td><td>Conservante que auxilia no controle do crescimento de microrganismos e aumenta a vida de prateleira.</td></tr>
+            <tr><td>Goma gelana</td><td>Agente de textura e estabilizante, responsável por conferir consistência ao gel.</td></tr>
+            <tr><td>Óleo de girassol</td><td>Contribui para as características de textura e sensoriais da formulação.</td></tr>
+            <tr><td>Aromatizantes</td><td>Conferem o sabor e o aroma desejados ao produto.</td></tr>
+            <tr><td>Café solúvel</td><td>Confere sabor e aroma característicos de café.</td></tr>
+            <tr><td>Cacau em pó</td><td>Confere sabor e aroma de cacau ou achocolatado.</td></tr>
+            <tr><td>Sucralose</td><td>Edulcorante de alta intensidade, adoça o produto com pequena quantidade.</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </details>
+  </section>
+</div>
+</div>
+<!-- ================= LEGISLAÇÃO ================= -->
+<div class="painel" id="p-legis" role="tabpanel" aria-labelledby="tab-legis">
+<div class="wrap">
+  <div class="chapeu"><h2>Análise da legislação</h2></div>
+  <p class="intro">O que a ANVISA e o MAPA exigem de um gel de carboidrato de mel: como o produto é enquadrado, quanto de cada constituinte pode entrar, o que precisa aparecer no rótulo, o que pode ser alegado e como notificar o produto antes de vender.</p>
+
+  <section>
+    <h3>Enquadramento legal</h3>
+    <p class="leg">Para a ANVISA, o gel de carboidrato é um <strong>suplemento alimentar</strong>. O enquadramento segue a RDC nº 243 e a IN nº 28, ambas de 26 de julho de 2018, que tratam dos requisitos sanitários e da lista de constituintes da categoria.</p>
+    <div class="aviso">
+      <p>A maior limitação do enquadramento é a <strong>quantidade de carboidrato no produto comercializado</strong>. Os limites mínimos e máximos por grupo populacional estão na IN nº 28/2018 e valem também para cada fonte de carboidrato adicionada, incluindo mel e maltodextrina.</p>
+    </div>
+
+    <h4 style="margin-top:32px">Limites por grupo populacional</h4>
+    <p class="leg">Escolha o constituinte para ver os limites de consumo diário.</p>
+    <div class="seg" role="group" aria-label="Constituinte">
+      <button data-lim="carbo" aria-pressed="true">Carboidrato</button>
+      <button data-lim="cafeina" aria-pressed="false">Cafeína</button>
+      <button data-lim="magnesio" aria-pressed="false">Magnésio</button>
+      <button data-lim="vitc" aria-pressed="false">Vitamina C</button>
+    </div>
+
+    <div class="limite-tab ativo" id="lim-carbo">
+      <div class="rolagem"><table>
+        <thead><tr><th>Grupo populacional</th><th class="n">Limite mínimo</th><th class="n">Limite máximo</th></tr></thead>
+        <tbody>
+          <tr><td>0 a 6 meses</td><td class="n"><span class="pill na">Não autorizado</span></td><td class="n"><span class="pill na">Não autorizado</span></td></tr>
+          <tr><td>7 a 11 meses</td><td class="n"><span class="pill na">Não autorizado</span></td><td class="n"><span class="pill na">Não autorizado</span></td></tr>
+          <tr><td>1 a 3 anos</td><td class="n"><span class="pill na">Não autorizado</span></td><td class="n"><span class="pill na">Não autorizado</span></td></tr>
+          <tr><td>4 a 8 anos</td><td class="n">19,5 g</td><td class="n">Não especificado</td></tr>
+          <tr><td>9 a 18 anos</td><td class="n">19,5 g</td><td class="n">Não especificado</td></tr>
+          <tr><td>19 anos ou mais</td><td class="n">19,5 g</td><td class="n">Não especificado</td></tr>
+          <tr><td>Gestantes</td><td class="n">26,25 g</td><td class="n">Não especificado</td></tr>
+          <tr><td>Lactantes</td><td class="n">31,5 g</td><td class="n">Não especificado</td></tr>
+        </tbody>
+      </table></div>
+      <p class="fonte">Fonte: IN nº 28/2018. Os oito produtos analisados na aba anterior entregam de 20 g a 32 g de carboidrato por sachê, ou seja, todos acima do mínimo de 19,5 g exigido para adultos.</p>
+    </div>
+
+    <div class="limite-tab" id="lim-cafeina">
+      <div class="rolagem"><table>
+        <thead><tr><th>Grupo populacional</th><th class="n">Limite mínimo</th><th class="n">Limite máximo</th></tr></thead>
+        <tbody>
+          <tr><td>0 a 6 meses</td><td class="n"><span class="pill na">Não autorizado</span></td><td class="n"><span class="pill na">Não autorizado</span></td></tr>
+          <tr><td>7 a 11 meses</td><td class="n"><span class="pill na">Não autorizado</span></td><td class="n"><span class="pill na">Não autorizado</span></td></tr>
+          <tr><td>1 a 3 anos</td><td class="n"><span class="pill na">Não autorizado</span></td><td class="n"><span class="pill na">Não autorizado</span></td></tr>
+          <tr><td>4 a 8 anos</td><td class="n"><span class="pill na">Não autorizado</span></td><td class="n"><span class="pill na">Não autorizado</span></td></tr>
+          <tr><td>9 a 18 anos</td><td class="n"><span class="pill na">Não autorizado</span></td><td class="n"><span class="pill na">Não autorizado</span></td></tr>
+          <tr><td>19 anos ou mais</td><td class="n">75 mg</td><td class="n">200 mg</td></tr>
+          <tr><td>Gestantes</td><td class="n"><span class="pill na">Não autorizado</span></td><td class="n"><span class="pill na">Não autorizado</span></td></tr>
+          <tr><td>Lactantes</td><td class="n"><span class="pill na">Não autorizado</span></td><td class="n"><span class="pill na">Não autorizado</span></td></tr>
+        </tbody>
+      </table></div>
+      <p class="fonte">Fonte: IN nº 28/2018. A faixa de 75 mg a 200 mg é a condição para que a alegação de cafeína possa ser feita no rótulo.</p>
+    </div>
+
+    <div class="limite-tab" id="lim-magnesio">
+      <div class="rolagem"><table>
+        <thead><tr><th>Grupo populacional</th><th class="n">Limite mínimo</th><th class="n">Limite máximo</th></tr></thead>
+        <tbody>
+          <tr><td>0 a 6 meses</td><td class="n"><span class="pill na">Não autorizado</span></td><td class="n"><span class="pill na">Não autorizado</span></td></tr>
+          <tr><td>7 a 11 meses</td><td class="n"><span class="pill na">Não autorizado</span></td><td class="n"><span class="pill na">Não autorizado</span></td></tr>
+          <tr><td>1 a 3 anos</td><td class="n">12 mg</td><td class="n">65 mg</td></tr>
+          <tr><td>4 a 8 anos</td><td class="n">19,5 mg</td><td class="n">110 mg</td></tr>
+          <tr><td>9 a 18 anos</td><td class="n">61,5 mg</td><td class="n">350 mg</td></tr>
+          <tr><td>19 anos ou mais</td><td class="n">63 mg</td><td class="n">350 mg</td></tr>
+          <tr><td>Gestantes</td><td class="n">60 mg</td><td class="n">350 mg</td></tr>
+          <tr><td>Lactantes</td><td class="n">54 mg</td><td class="n">350 mg</td></tr>
+        </tbody>
+      </table></div>
+      <p class="fonte">Fonte: IN nº 28/2018.</p>
+    </div>
+
+    <div class="limite-tab" id="lim-vitc">
+      <div class="rolagem"><table>
+        <thead><tr><th>Grupo populacional</th><th class="n">Limite mínimo</th><th class="n">Limite máximo</th></tr></thead>
+        <tbody>
+          <tr><td>0 a 6 meses</td><td class="n"><span class="pill na">Não autorizado</span></td><td class="n"><span class="pill na">Não autorizado</span></td></tr>
+          <tr><td>7 a 11 meses</td><td class="n"><span class="pill na">Não autorizado</span></td><td class="n"><span class="pill na">Não autorizado</span></td></tr>
+          <tr><td>1 a 3 anos</td><td class="n">2,25 mg</td><td class="n">285 mg</td></tr>
+          <tr><td>4 a 8 anos</td><td class="n">3,75 mg</td><td class="n">625 mg</td></tr>
+          <tr><td>9 a 18 anos</td><td class="n">11,25 mg</td><td class="n">1.125,65 mg</td></tr>
+          <tr><td>19 anos ou mais</td><td class="n">13,5 mg</td><td class="n">1.916,02 mg</td></tr>
+          <tr><td>Gestantes</td><td class="n">12,75 mg</td><td class="n">1.723,43 mg</td></tr>
+          <tr><td>Lactantes</td><td class="n">Não especificado</td><td class="n">1.726,73 mg</td></tr>
+        </tbody>
+      </table></div>
+      <p class="fonte">Fonte: IN nº 28/2018.</p>
+    </div>
+  </section>
+
+  <section>
+    <h3>Estudo de ingredientes</h3>
+    <p class="leg">Antes de entrar em cada ingrediente, vale fixar o que são <strong>carboidratos de rápida absorção</strong>: fontes de energia digeridas e transformadas em glicose rapidamente, que dão combustível imediato aos músculos. Dextrose, maltodextrina e frutose são os exemplos mais comuns. Consumidos antes, durante ou depois do exercício, ajudam a manter o desempenho, retardar a fadiga e acelerar a recuperação energética. Combinados a eletrólitos como sódio, potássio e magnésio, também contribuem para a hidratação e a reposição de minerais perdidos no suor. Em déficit calórico, ainda ajudam a preservar massa muscular, reduzindo o uso de proteína muscular como fonte de energia.</p>
+
+    <details open>
+      <summary><span class="hexnum">1</span>Mel</summary>
+      <div class="corpo">
+        <h5>Função</h5>
+        <ul><li>Fonte de carboidratos composta por frutose e glicose, com energia rápida ao organismo.</li></ul>
+        <h5>Diferencial</h5>
+        <ul>
+          <li>A combinação de duas fontes primárias de carboidrato, frutose e glicose, tende a ser mais bem absorvida pelo organismo.</li>
+          <li>Apelo natural ao produto.</li>
+        </ul>
+        <h5>Quantidade permitida</h5>
+        <ul><li>O mel em si não tem limitação. O que é limitado é sua denominação como fonte de carboidratos em um suplemento alimentar, que precisa respeitar os limites de carboidrato por grupo populacional.</li></ul>
+        <h5>Legislação</h5>
+        <ul>
+          <li><strong>IN nº 11, de 20 de outubro de 2000 (MAPA)</strong> e suas atualizações definem qualidade e identidade do mel. A denominação do produto como mel depende da origem, conforme o item 2.3 da norma.</li>
+          <li><strong>Portaria SDA/MAPA nº 1.439, de 6 de novembro de 2025</strong>, define as normas higiênico-sanitárias e tecnológicas dos estabelecimentos que elaboram produtos de abelhas. No anexo há critérios que enquadram o mel apenas para uso industrial, o que pode virar uma via de reaproveitamento de matéria-prima ou um mel de segunda linha que viabilize economicamente o gel. Seria preciso avaliar o impacto desse uso na vida de prateleira do produto final.</li>
+          <li><strong>Decreto nº 9.013, de 29 de março de 2017</strong>, trata da inspeção industrial e sanitária de produtos de origem animal. O Título VI, Capítulo VI obriga a advertência “Este produto não deve ser consumido por crianças menores de um ano de idade” na rotulagem. No mel para uso industrial, o rótulo deve trazer “Proibida a venda fracionada” e não pode indicar origem floral ou vegetal. O Título VII, Capítulos I e IV exigem registro do produto no MAPA e carimbo de inspeção (S.I.F.) visível na embalagem.</li>
+        </ul>
+        <div class="aviso" style="margin-top:18px;margin-bottom:0">
+          <p style="margin:0"><strong>Mel para uso industrial:</strong> aquele que indica alteração em aspectos sensoriais e fica fora das especificações do mel comum, mas não é desclassificado para o emprego em produtos alimentícios.</p>
+        </div>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="hexnum">2</span>Cafeína</summary>
+      <div class="corpo">
+        <h5>Função</h5>
+        <ul><li>Estimulante do sistema nervoso central, auxilia na concentração e no aumento da resistência física.</li></ul>
+        <h5>Diferencial</h5>
+        <ul>
+          <li>Melhoria no desempenho em exercícios de resistência.</li>
+          <li>Apelo natural ao produto.</li>
+        </ul>
+        <h5>Quantidade permitida</h5>
+        <ul><li>Para alegar a função da cafeína, o produto precisa ficar entre <strong>75 mg e 200 mg</strong> para o grupo de 19 anos ou mais. Nos demais grupos, o uso não é autorizado.</li></ul>
+        <h5>Observação</h5>
+        <ul><li>A cafeína pura costuma provocar um cansaço repentino quando sua ação termina. Combiná-la com taurina é uma estratégia para estabilizar esse efeito tecnológico e prolongar a sensação de alerta.</li></ul>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="hexnum">3</span>Eletrólitos</summary>
+      <div class="corpo">
+        <h5>Função</h5>
+        <ul><li>Regulam a distribuição de água entre os meios intracelular e extracelular, favorecendo a hidratação. Também atuam no controle de impulsos nervosos e contrações musculares.</li></ul>
+        <h5>Diferencial</h5>
+        <ul>
+          <li>Regularizam a água no corpo, evitando perda excessiva.</li>
+          <li>Com o controle das contrações musculares, auxiliam atletas durante exercícios intensos.</li>
+          <li>Com a condução de impulsos nervosos mais precisa, o atleta desempenha melhor.</li>
+        </ul>
+        <h5>Principais eletrólitos em géis de carboidrato</h5>
+        <ul>
+          <li><strong>Sódio (Na⁺):</strong> principal eletrólito perdido pelo suor. Auxilia na retenção de líquidos, estimula a absorção de água e glicose e ajuda a manter a função muscular e nervosa.</li>
+          <li><strong>Potássio (K⁺):</strong> participa da contração muscular, da transmissão dos impulsos nervosos e do equilíbrio dos fluidos corporais.</li>
+          <li><strong>Magnésio (Mg²⁺):</strong> atua no metabolismo energético, na contração e no relaxamento muscular e na redução da fadiga.</li>
+        </ul>
+        <div class="aviso forte" style="margin-top:18px;margin-bottom:0">
+          <p style="margin:0"><strong>Atenção à rotulagem frontal.</strong> A advertência “ALTO EM SÓDIO” passa a ser obrigatória com 600 mg de sódio ou mais por 100 g, em sólidos e semissólidos, ou 300 mg ou mais por 100 ml, em líquidos.</p>
+        </div>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="hexnum">4</span>Vitamina C</summary>
+      <div class="corpo">
+        <p>A forma ativa da vitamina C é o ácido ascórbico, que será a principal fonte no produto. Ele pode ser extraído da acerola ou obtido por síntese, sendo a produção sintética a mais comum no mercado.</p>
+        <h5>Função</h5>
+        <ul><li>Atua como antioxidante, auxiliando na proteção contra danos causados por radicais livres.</li></ul>
+        <h5>Diferencial</h5>
+        <ul>
+          <li>Auxílio ao metabolismo energético.</li>
+          <li>Auxílio na formação e manutenção do colágeno, o que ajuda na recuperação corporal.</li>
+        </ul>
+        <h5>Alegações por teor</h5>
+        <ul>
+          <li>Com no mínimo <strong>15% do valor diário de referência</strong> na porção recomendada, o produto pode ser alegado como “Fonte de Vitamina C” e classificado como antioxidante.</li>
+          <li>Atingindo <strong>30% do VDR</strong>, pode ser alegado como “Rico em Vitamina C”.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="hexnum">5</span>Maltodextrina</summary>
+      <div class="corpo">
+        <h5>Função</h5>
+        <ul>
+          <li>Açúcar invertido usado para evitar a cristalização do produto.</li>
+          <li>Fornecimento de glicose ao corpo, pela alta quantidade de carboidratos.</li>
+          <li>Estimula a liberação de insulina.</li>
+        </ul>
+        <h5>Diferencial</h5>
+        <ul>
+          <li>Pela estrutura molecular, impede que o gel forme cristais.</li>
+          <li>Fonte de energia direta para o metabolismo humano.</li>
+          <li>Segundo a pesquisa de Emilio Merheb e Nader Rahimi em <em>Biochemistry, Insulin Metabolic Effects</em>, a liberação de insulina auxilia no controle energético, ajudando as células a gerir energia tanto no uso quanto no armazenamento.</li>
+        </ul>
+        <h5>Quantidade permitida</h5>
+        <ul><li>Pela RDC nº 1.003, de 16 de dezembro de 2025, a quantidade de maltodextrina adicionada deve observar o limite máximo de carboidratos e as demais fontes de carboidrato adicionadas ao produto.</li></ul>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="hexnum">6</span>Ácido cítrico</summary>
+      <div class="corpo">
+        <h5>Função</h5>
+        <ul><li>Aditivo acidulante, atua pela regulação do pH e promove maior estabilidade ao produto.</li></ul>
+        <h5>Diferencial</h5>
+        <ul>
+          <li>Obtido de fontes naturais, as frutas cítricas.</li>
+          <li>Realçador de sabor.</li>
+        </ul>
+        <h5>Legislação</h5>
+        <ul><li>Não possui limites estabelecidos, sendo categorizado como <em>quantum satis</em> pela ANVISA.</li></ul>
+        <h5>Observação</h5>
+        <ul><li>Combinado ao citrato de sódio, que também é fonte de sódio, forma uma solução tampão: um sistema capaz de resistir a mudanças de pH, o que dá alta estabilidade e padronização ao produto.</li></ul>
+      </div>
+    </details>
+  </section>
+
+  <section>
+    <h3>Rotulagem</h3>
+
+    <h4 style="margin-top:24px">Designação</h4>
+    <p class="leg">Pelo art. 12 da RDC nº 243/2018, o produto deve obrigatoriamente ser designado como “Suplemento Alimentar” acrescido da forma farmacêutica, ou seja, <strong>“Suplemento Alimentar em gel”</strong>. A designação pode ser complementada, de forma opcional, por uma destas três opções:</p>
+    <div class="rolagem" style="margin-bottom:32px"><table>
+      <thead><tr><th style="width:40%">Complemento permitido</th><th>Exemplo aplicado ao produto</th></tr></thead>
+      <tbody>
+        <tr><td>Nomes individuais dos nutrientes, substâncias bioativas ou enzimas</td><td>Suplemento Alimentar de mel em gel</td></tr>
+        <tr><td>Nomes das categorias de nutrientes, substâncias bioativas ou enzimas</td><td>Suplemento Alimentar de carboidrato em gel</td></tr>
+        <tr><td>Nome da fonte da qual o nutriente foi extraído</td><td>Suplemento Alimentar de mel de abelha em gel</td></tr>
+      </tbody>
+    </table></div>
+
+    <h4>Informações obrigatórias</h4>
+    <p class="leg">A RDC nº 243/2018 exige recomendação de uso contendo os grupos populacionais indicados, com faixa etária no caso de crianças, e a quantidade e a frequência de consumo para cada grupo. A recomendação pode ser complementada com indicações para gêneros, faixas etárias específicas e praticantes de atividade física dentro de cada grupo. Também são obrigatórias as instruções de conservação, inclusive após a abertura da embalagem.</p>
+    <div class="rotulo">
+      <b>ESTE PRODUTO NÃO É UM MEDICAMENTO</b>
+      <b>NÃO EXCEDER A RECOMENDAÇÃO DIÁRIA DE CONSUMO INDICADA NA EMBALAGEM</b>
+      <b>MANTENHA FORA DO ALCANCE DE CRIANÇAS</b>
+      <b class="cafeina">ESTE PRODUTO NÃO DEVE SER CONSUMIDO POR GESTANTES, LACTANTES E CRIANÇAS</b>
+    </div>
+    <p class="fonte">As três primeiras advertências são obrigatórias em destaque e negrito. A quarta só entra se a formulação final contiver cafeína. A rotulagem nutricional e seus requisitos técnicos seguem a RDC nº 429 e a IN nº 75, ambas de 8 de outubro de 2020.</p>
+
+    <h4 style="margin-top:36px">Alegações permitidas</h4>
+    <p class="leg">Pelo § 2º do art. 16 da RDC nº 243/2018, as alegações só são obrigatórias para suplementos que contenham probióticos ou enzimas. Para os demais, incluindo o gel, o uso é opcional. Estas são as alegações disponíveis para os constituintes previstos no produto e o que cada uma exige.</p>
+    <div class="rolagem"><table>
+      <thead><tr><th style="width:16%">Constituinte</th><th style="width:32%">Alegação</th><th>Requisitos</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Carboidratos</td>
+          <td>Os carboidratos auxiliam na recuperação da função muscular normal após exercícios extenuantes.</td>
+          <td>A quantidade de carboidratos deve atender ao limite mínimo do grupo populacional. O rótulo precisa informar que o consumo deve ser de 4 g/kg de peso corporal nas primeiras 4 a 6 horas após o exercício fatigante.</td>
+        </tr>
+        <tr>
+          <td rowspan="2">Carboidratos e eletrólitos</td>
+          <td>Auxilia a manutenção do equilíbrio de fluidos e eletrólitos e no desempenho de exercícios físicos de resistência.</td>
+          <td>Carboidratos como principal fonte de energia; mínimo de 80 kcal/L e máximo de 350 kcal/L; mínimo de 75% da energia derivada de carboidratos metabolizáveis; mínimo de 20 mmol/L (460 mg/L) e máximo de 50 mmol/L (1.150 mg/L) de sódio; osmolalidade entre 200 e 330 mOsm/kg de água.</td>
+        </tr>
+        <tr>
+          <td>Isotônico.</td>
+          <td>Mesmos três primeiros requisitos acima; sódio entre 20 e 50 mmol/L; osmolalidade entre 270 e 330 mOsm/kg de água.</td>
+        </tr>
+        <tr>
+          <td rowspan="2">Cafeína</td>
+          <td>A cafeína auxilia no aumento do estado de alerta e na melhora da concentração.</td>
+          <td>A quantidade de cafeína deve atender ao limite mínimo de 75 mg.</td>
+        </tr>
+        <tr>
+          <td>A cafeína auxilia no aumento da capacidade de resistência e no desempenho de exercícios físicos de resistência.</td>
+          <td>A quantidade recomendada deve ser de 200 mg, consumida uma hora antes do exercício.</td>
+        </tr>
+        <tr>
+          <td rowspan="5">Vitamina C</td>
+          <td>A vitamina C é um antioxidante que auxilia na proteção dos danos causados pelos radicais livres.</td>
+          <td rowspan="4">Alegações restritas aos suplementos cuja quantidade de vitamina C atenda aos valores mínimos do Anexo III da IN nº 28/2018.</td>
+        </tr>
+        <tr><td>A vitamina C auxilia no funcionamento do sistema imune.</td></tr>
+        <tr><td>A vitamina C auxilia na formação do colágeno.</td></tr>
+        <tr><td>A vitamina C auxilia no metabolismo energético.</td></tr>
+        <tr>
+          <td>Alto conteúdo, rico em ou alto teor de vitamina C.</td>
+          <td>Restrita aos suplementos cuja quantidade de vitamina C corresponda ao dobro dos valores mínimos do Anexo III da IN nº 28/2018, desde que não ultrapasse o limite máximo do Anexo IV.</td>
+        </tr>
+      </tbody>
+    </table></div>
+    <p class="fonte">Fonte: IN nº 28/2018.</p>
+  </section>
+
+  <section>
+    <h3>Regularização</h3>
+    <p class="leg">A regularização de suplementos alimentares segue a RDC nº 843 e a IN nº 281, ambas de 22 de fevereiro de 2024. Pelo Anexo II da IN nº 281/2024, o produto tem <strong>obrigatoriedade de notificação junto à ANVISA</strong>, protocolada por petição com código de assunto específico. Atendidos os requisitos da RDC nº 843/2024, a notificação é automática e não passa por avaliação prévia, embora a ANVISA possa avaliar o produto a qualquer momento.</p>
+    <h4 style="margin-top:28px">Documentos que instruem a notificação</h4>
+    <ol class="passos">
+      <li><div><b>Formulário de notificação preenchido</b><br>Conforme o modelo específico da categoria, disponibilizado no sistema da ANVISA.</div></li>
+      <li><div><b>Licenciamento sanitário do fabricante</b><br>Cópia válida do licenciamento de quem realiza produção, controle de qualidade e armazenamento em território nacional. Para fabricantes no exterior, documento que comprove a regularidade junto à autoridade sanitária do país de origem.</div></li>
+      <li><div><b>Relatório de estudos de estabilidade</b><br>Precisa garantir a manutenção das características do produto, incluindo propriedades nutricionais, durante todo o prazo de validade declarado. Estudos pós reconstituição entram quando o produto for para diluição.</div></li>
+      <li><div><b>Laudo de análise ou memorial de cálculo</b><br>Comprovando o atendimento aos requisitos de composição estabelecidos pelo regulamento técnico específico.</div></li>
+    </ol>
+    <div class="aviso forte" style="margin-top:28px">
+      <p><strong>A venda só pode começar depois do protocolo da notificação.</strong> Além disso, o rótulo precisa trazer a declaração “Alimento notificado na Anvisa:” seguida do número completo do processo.</p>
+    </div>
+  </section>
+</div>
+</div>
+<!-- ================= FORMULAÇÕES ================= -->
+<div class="painel" id="p-form" role="tabpanel" aria-labelledby="tab-form">
+<div class="wrap">
+  <div class="chapeu"><h2>Formulações teóricas</h2></div>
+  <p class="intro">Três rotas possíveis para o gel, construídas a partir do estudo de mercado e da legislação. Elas permitem enxergar como cada ingrediente afeta o custo final da produção, buscando alinhar viabilidade econômica e desempenho tecnológico.</p>
+
+  <div class="aviso forte">
+    <p><strong>Estas formulações são teóricas e ainda precisam ser validadas em bancada.</strong> Nenhuma delas foi testada em laboratório. Quantidades marcadas como estimadas dependem do ajuste de consistência durante os testes.</p>
+  </div>
+
+  <div class="forms">
+
+    <article class="form-card">
+      <header>
+        <b>Formulação 1</b>
+        <h4>Base</h4>
+        <p>Estabelece o gel de carboidrato de partida, a partir do qual as outras variações serão ajustadas. Usa ingredientes simples e com bom desempenho em conjunto.</p>
+      </header>
+      <div class="rolagem" style="border:0">
+        <table>
+          <thead><tr><th>Ingrediente</th><th class="n">Por 100 g</th></tr></thead>
+          <tbody>
+            <tr><td>Mel<br><span class="fn">Fonte de carboidrato</span></td><td class="n">80 g</td></tr>
+            <tr><td>Citrato de sódio<br><span class="fn">Eletrólito e conservante</span></td><td class="n">1,00 g</td></tr>
+            <tr><td>Cloreto de sódio<br><span class="fn">Eletrólito e regulador de pH</span></td><td class="n">0,95 g</td></tr>
+            <tr><td>Ácido cítrico<br><span class="fn">Acidulante e conservante</span></td><td class="n">0,5 g</td></tr>
+            <tr><td>Ácido ascórbico<br><span class="fn">Antioxidante e conservante</span></td><td class="n">0,33 g</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <article class="form-card">
+      <header>
+        <b>Formulação 2</b>
+        <h4>Com estimulantes</h4>
+        <p>Avalia o uso de cafeína e taurina no produto, buscando um gel que potencialize o desempenho dos atletas.</p>
+      </header>
+      <div class="rolagem" style="border:0">
+        <table>
+          <thead><tr><th>Ingrediente</th><th class="n">Por 100 g</th></tr></thead>
+          <tbody>
+            <tr><td>Mel<br><span class="fn">Fonte de carboidrato</span></td><td class="n">80 g</td></tr>
+            <tr><td>Água purificada<br><span class="fn">Consistência, viscosidade e fluidez</span></td><td class="n">16,3 g<br><span class="fn">estimado</span></td></tr>
+            <tr><td>Citrato de sódio<br><span class="fn">Eletrólito e conservante</span></td><td class="n">1,0 g</td></tr>
+            <tr><td>Cloreto de sódio<br><span class="fn">Eletrólito</span></td><td class="n">0,95 g</td></tr>
+            <tr><td>Taurina<br><span class="fn">Suporte ao desempenho físico</span></td><td class="n">1,0 g</td></tr>
+            <tr><td>Ácido cítrico<br><span class="fn">Acidulante e conservante</span></td><td class="n">0,5 g</td></tr>
+            <tr><td>Cafeína<br><span class="fn">Estimulante</span></td><td class="n">250 mg</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <article class="form-card">
+      <header>
+        <b>Formulação 3</b>
+        <h4>Com complexo vitamínico</h4>
+        <p>Testa o perfil vitamínico mais completo, juntando as vitaminas do complexo B e a vitamina C, sem estimulantes nem conservantes artificiais.</p>
+      </header>
+      <div class="rolagem" style="border:0">
+        <table>
+          <thead><tr><th>Ingrediente</th><th class="n">Por 100 g</th></tr></thead>
+          <tbody>
+            <tr><td>Mel<br><span class="fn">Fonte de carboidratos</span></td><td class="n">80,0 g</td></tr>
+            <tr><td>Água purificada<br><span class="fn">Consistência, viscosidade e fluidez</span></td><td class="n">18,6 g<br><span class="fn">estimado</span></td></tr>
+            <tr><td>Cloreto de sódio<br><span class="fn">Fonte de sódio</span></td><td class="n">910 mg</td></tr>
+            <tr><td>Ácido cítrico<br><span class="fn">Acidulante</span></td><td class="n">0,3 g<br><span class="fn">estimado</span></td></tr>
+            <tr><td>Ácido ascórbico (vitamina C)<br><span class="fn">Antioxidante</span></td><td class="n">200 mg</td></tr>
+            <tr><td>Vitamina B5 (ácido pantotênico)<br><span class="fn">Metabolismo energético e produção de energia celular</span></td><td class="n">6,47 mg</td></tr>
+            <tr><td>Vitamina B2 (riboflavina)<br><span class="fn">Metabolismo energético</span></td><td class="n">1,93 mg</td></tr>
+            <tr><td>Vitamina B6 (piridoxina)<br><span class="fn">Metabolismo energético e sistema nervoso</span></td><td class="n">1,30 mg</td></tr>
+            <tr><td>Vitamina B1 (tiamina)<br><span class="fn">Metabolismo energético</span></td><td class="n">0,97 mg</td></tr>
+            <tr><td>Vitamina B12 (cianocobalamina)<br><span class="fn">Metabolismo energético e sistema nervoso</span></td><td class="n">0,97 µg</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+  </div>
+
+  <section style="margin-top:56px">
+    <h3>O que muda de uma para a outra</h3>
+    <p class="leg">As três partem do mesmo eixo, 80 g de mel por 100 g de produto, e se diferenciam no que é acrescentado em torno dele.</p>
+    <div class="rolagem"><table>
+      <thead><tr><th>&nbsp;</th><th>1 · Base</th><th>2 · Estimulantes</th><th>3 · Complexo vitamínico</th></tr></thead>
+      <tbody>
+        <tr><td>Mel por 100 g</td><td class="n">80 g</td><td class="n">80 g</td><td class="n">80 g</td></tr>
+        <tr><td>Água adicionada</td><td><span class="pill nao">Não</span></td><td class="n">16,3 g</td><td class="n">18,6 g</td></tr>
+        <tr><td>Eletrólitos</td><td>Citrato e cloreto de sódio</td><td>Citrato e cloreto de sódio</td><td>Cloreto de sódio</td></tr>
+        <tr><td>Estimulantes</td><td><span class="pill nao">Não</span></td><td>Cafeína 250 mg e taurina 1,0 g</td><td><span class="pill nao">Não</span></td></tr>
+        <tr><td>Vitaminas</td><td>Vitamina C</td><td><span class="pill nao">Nenhuma</span></td><td>Vitamina C e complexo B</td></tr>
+        <tr><td>Ponto a checar em bancada</td><td>Cristalização e viscosidade sem água na fórmula</td><td>Cafeína acima do limite máximo de 200 mg por dia se a porção for grande</td><td>Estabilidade das vitaminas do complexo B ao longo da validade</td></tr>
+      </tbody>
+    </table></div>
+    <p class="fonte">A última linha reúne pontos de atenção derivados da análise de legislação desta mesma entrega e deve ser confirmada nos testes.</p>
+  </section>
+</div>
+</div>
+</main>
+
+<footer class="rodape">
+  <div class="wrap">
+    <img src="data:image/png;base64,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" alt="EJEQ">
+    <div class="equipe">
+      <div><b>Julia Liermann</b><span>Gerente de Projetos</span></div>
+      <div><b>Giovanna Cobra</b><span>Consultora de Projetos</span></div>
+      <div><b>Julia Tazinazzo</b><span>Consultora de Projetos</span></div>
+      <div><b>Pietro Bonato</b><span>Consultor de Projetos</span></div>
+      <div><b>Myriam Lorena Melgarejo Navarro Cerutti</b><span>Professora supervisora</span></div>
+    </div>
+  </div>
+  <div class="wrap" style="margin-top:32px;display:block;font-size:13px;opacity:.7">
+    Análise Técnica · Setembro de 2026 · Estamos à disposição para qualquer dúvida sobre esta entrega.
+  </div>
+</footer>
+
+<script>
+(function(){
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.tab'));
+  function abrir(t){
+    tabs.forEach(function(b){
+      var on = b === t;
+      b.setAttribute('aria-selected', on ? 'true' : 'false');
+      document.getElementById(b.getAttribute('aria-controls')).classList.toggle('ativo', on);
+    });
+    window.scrollTo({top: document.querySelector('.nav').offsetTop - 1, behavior: 'auto'});
+  }
+  tabs.forEach(function(t){
+    t.addEventListener('click', function(){ abrir(t); });
+    t.addEventListener('keydown', function(e){
+      var i = tabs.indexOf(t), n = null;
+      if(e.key === 'ArrowRight') n = tabs[(i+1) % tabs.length];
+      if(e.key === 'ArrowLeft') n = tabs[(i-1+tabs.length) % tabs.length];
+      if(n){ e.preventDefault(); n.focus(); abrir(n); }
+    });
+  });
+
+  var segs = Array.prototype.slice.call(document.querySelectorAll('.seg button'));
+  segs.forEach(function(b){
+    b.addEventListener('click', function(){
+      segs.forEach(function(o){
+        var on = o === b;
+        o.setAttribute('aria-pressed', on ? 'true' : 'false');
+        document.getElementById('lim-' + o.dataset.lim).classList.toggle('ativo', on);
+      });
+    });
+  });
+})();
+</script>
+</body>
+</html>
