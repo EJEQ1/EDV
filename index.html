@@ -67,23 +67,23 @@ a{color:inherit}
 .nav .wrap{display:flex;gap:4px;padding:0 24px;overflow-x:auto;scrollbar-width:none}
 .nav .wrap::-webkit-scrollbar{display:none}
 .tab{appearance:none;border:0;background:none;cursor:pointer;white-space:nowrap;
-  font-family:inherit;font-size:15px;font-weight:600;color:var(--tinta-45);
+  font-family:inherit;font-size:13.5px;font-weight:700;color:var(--tinta-45);text-transform:uppercase;letter-spacing:.06em;
   padding:20px 18px 17px;border-bottom:3px solid transparent;transition:color .15s}
 .tab:hover{color:var(--tinta-70)}
 .tab[aria-selected="true"]{color:var(--tinta);border-bottom-color:var(--mel)}
 .tab:focus-visible{outline:2px solid var(--mel);outline-offset:-4px;border-radius:4px}
-.tab i{font-style:normal;color:var(--tinta-45);font-weight:500;margin-left:8px;font-size:13px}
+.tab i{font-style:normal;color:var(--tinta-45);font-weight:500;margin-left:8px;font-size:12px;letter-spacing:.03em;text-transform:none}
 .tab[aria-selected="true"] i{color:var(--mel)}
 
 /* ---------- panels ---------- */
 .painel{display:none;padding:56px 0 96px}
 .painel.ativo{display:block}
 .chapeu{display:flex;align-items:baseline;gap:16px;margin-bottom:8px}
-.chapeu h2{font-size:clamp(30px,4.6vw,46px)}
+.chapeu h2{font-size:clamp(28px,4.4vw,44px);text-transform:uppercase;letter-spacing:-.005em}
 .painel>.wrap>p.intro{max-width:70ch;font-size:17px;color:var(--tinta-70);margin-bottom:44px}
 
 section{margin-bottom:64px}
-section>h3{font-size:22px;margin-bottom:6px}
+section>h3{font-size:19px;margin-bottom:8px;text-transform:uppercase;letter-spacing:.03em}
 section>p.leg{color:var(--tinta-70);max-width:70ch;margin-bottom:22px}
 h4{font-size:16px;margin-bottom:8px}
 
@@ -235,10 +235,10 @@ ol.passos li:last-child{border-bottom:1px solid var(--cera)}
       <span>EJEQ · Engenharia Química · UFPR</span>
     </div>
     <h1>Análise Técnica</h1>
-    <p class="sub">Estudo de viabilidade para um gel de carboidrato à base de mel</p>
+    <p class="sub">Estudo de viabilidade para gel de carboidrato à base de mel</p>
     <dl class="meta">
       <div><dt>Cliente</dt><dd>Rosecleia e Danielly</dd></div>
-      <div><dt>Entrega</dt><dd>1 de 3 · Análise Técnica</dd></div>
+      <div><dt>Entrega</dt><dd>Primeira · Análise Técnica</dd></div>
       <div><dt>Data</dt><dd>Setembro de 2026</dd></div>
       <div><dt>Supervisão</dt><dd>Profa. Myriam Cerutti</dd></div>
     </dl>
@@ -253,8 +253,8 @@ ol.passos li:last-child{border-bottom:1px solid var(--cera)}
 
 <nav class="nav" aria-label="Seções do relatório">
   <div class="wrap" role="tablist">
-    <button class="tab" role="tab" id="tab-mercado" aria-controls="p-mercado" aria-selected="true">Análise dos concorrentes<i>7 marcas</i></button>
-    <button class="tab" role="tab" id="tab-legis" aria-controls="p-legis" aria-selected="false">Análise da legislação<i>ANVISA e MAPA</i></button>
+    <button class="tab" role="tab" id="tab-mercado" aria-controls="p-mercado" aria-selected="true">Estudo de Mercado<i>7 marcas</i></button>
+    <button class="tab" role="tab" id="tab-legis" aria-controls="p-legis" aria-selected="false">Análise de Legislação<i>ANVISA e MAPA</i></button>
     <button class="tab" role="tab" id="tab-form" aria-controls="p-form" aria-selected="false">Formulações teóricas<i>3 rotas</i></button>
   </div>
 </nav>
@@ -263,7 +263,7 @@ ol.passos li:last-child{border-bottom:1px solid var(--cera)}
 <main>
 <div class="painel ativo" id="p-mercado" role="tabpanel" aria-labelledby="tab-mercado">
 <div class="wrap">
-  <div class="chapeu"><h2>Análise dos concorrentes</h2></div>
+  <div class="chapeu"><h2>Estudo de Mercado</h2></div>
   <p class="intro">Oito produtos de sete marcas, comparados por preço, composição e tabela nutricional. A referência definida na reunião de alinhamento é o EnergyGel da Action Bee. Os demais entram para mostrar o que existe de eletrólito, cafeína, vitamina e mel disponível hoje na prateleira.</p>
 
   <div class="numeros">
@@ -304,12 +304,12 @@ ol.passos li:last-child{border-bottom:1px solid var(--cera)}
           <tr><th scope="row">Taurina</th><td class="n">201 mg</td><td class="n">&mdash;</td><td class="n">&mdash;</td><td class="n">&mdash;</td><td class="n">500 mg</td><td class="n">&mdash;</td><td class="n">93 mg</td><td class="n">&mdash;</td></tr>
           <tr><th scope="row">Mel na formulação</th><td><span class="pill sim">Sim</span></td><td><span class="pill nao">Não</span></td><td><span class="pill sim">Sim</span></td><td><span class="pill sim">Sim</span></td><td><span class="pill nao">Não</span></td><td><span class="pill nao">Não</span></td><td><span class="pill nao">Não</span></td><td><span class="pill nao">Não</span></td></tr>
           <tr><th scope="row">Vitaminas</th><td>C e B1</td><td><span class="pill na">Nenhuma</span></td><td>Complexo B</td><td><span class="pill na">Nenhuma</span></td><td><span class="pill na">Nenhuma</span></td><td><span class="pill na">Nenhuma</span></td><td>Complexo B</td><td><span class="pill na">Nenhuma</span></td></tr>
-          <tr><th scope="row">Conservantes</th><td><span class="pill sim">Não usa</span></td><td><span class="pill nao">Usa</span></td><td><span class="pill sim">Não usa</span></td><td><span class="pill nao">Usa</span></td><td><span class="pill nao">Usa</span></td><td><span class="pill nao">Usa</span></td><td><span class="pill nao">Usa</span></td><td><span class="pill nao">Usa</span></td></tr>
+          <tr><th scope="row">Conservantes apontados</th><td><span class="pill sim">Não usa</span></td><td><span class="pill nao">Usa</span></td><td><span class="pill sim">Não usa</span></td><td><span class="pill nao">Usa</span></td><td><span class="pill nao">Usa</span></td><td><span class="pill nao">Usa</span></td><td><span class="pill nao">Usa</span></td><td><span class="pill nao">Usa</span></td></tr>
           <tr><th scope="row">Eletrólitos</th><td><span class="pill nao">Não</span></td><td><span class="pill sim">Sim</span></td><td><span class="pill sim">Sim</span></td><td><span class="pill sim">Sim</span></td><td><span class="pill sim">Sim</span></td><td><span class="pill sim">Sim</span></td><td><span class="pill sim">Sim</span></td><td><span class="pill sim">Sim</span></td></tr>
         </tbody>
       </table>
     </div>
-    <p class="fonte">Fonte: rótulos e sites dos fabricantes, consultados em julho e agosto de 2026. Traço indica valor não declarado no rótulo.</p>
+    <p class="fonte">Fonte: rótulos e sites dos fabricantes, consultados em julho e agosto de 2026. Traço indica valor não declarado no rótulo. A linha de conservantes reproduz a limitação declarada para cada produto: a Action Bee traz ácido cítrico, classificado no próprio estudo como acidulante e conservante obtido de fonte natural.</p>
   </section>
 
   <section>
@@ -646,7 +646,7 @@ ol.passos li:last-child{border-bottom:1px solid var(--cera)}
 <!-- ================= LEGISLAÇÃO ================= -->
 <div class="painel" id="p-legis" role="tabpanel" aria-labelledby="tab-legis">
 <div class="wrap">
-  <div class="chapeu"><h2>Análise da legislação</h2></div>
+  <div class="chapeu"><h2>Análise de Legislação</h2></div>
   <p class="intro">O que a ANVISA e o MAPA exigem de um gel de carboidrato de mel: como o produto é enquadrado, quanto de cada constituinte pode entrar, o que precisa aparecer no rótulo, o que pode ser alegado e como notificar o produto antes de vender.</p>
 
   <section>
@@ -1036,10 +1036,10 @@ ol.passos li:last-child{border-bottom:1px solid var(--cera)}
         <tr><td>Eletrólitos</td><td>Citrato e cloreto de sódio</td><td>Citrato e cloreto de sódio</td><td>Cloreto de sódio</td></tr>
         <tr><td>Estimulantes</td><td><span class="pill nao">Não</span></td><td>Cafeína 250 mg e taurina 1,0 g</td><td><span class="pill nao">Não</span></td></tr>
         <tr><td>Vitaminas</td><td>Vitamina C</td><td><span class="pill nao">Nenhuma</span></td><td>Vitamina C e complexo B</td></tr>
-        <tr><td>Ponto a checar em bancada</td><td>Cristalização e viscosidade sem água na fórmula</td><td>Cafeína acima do limite máximo de 200 mg por dia se a porção for grande</td><td>Estabilidade das vitaminas do complexo B ao longo da validade</td></tr>
+        <tr><td>Ponto a checar em bancada</td><td>Cristalização e viscosidade sem água na fórmula</td><td>Peso do sachê define o enquadramento da cafeína: 250 mg/100 g equivalem a 75 mg em 30 g, exatamente o mínimo alegável</td><td>Estabilidade das vitaminas do complexo B ao longo da validade</td></tr>
       </tbody>
     </table></div>
-    <p class="fonte">A última linha reúne pontos de atenção derivados da análise de legislação desta mesma entrega e deve ser confirmada nos testes.</p>
+    <p class="fonte">A última linha reúne pontos de atenção derivados da Análise de Legislação desta mesma entrega e deve ser confirmada nos testes.</p>
   </section>
 </div>
 </div>
